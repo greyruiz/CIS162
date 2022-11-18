@@ -1,32 +1,50 @@
-﻿/*Greg Ruiz
+/*Greg Ruiz
 Project 1-3 CSS Sheet
-11/8/22
+11/14/22
 */
 /* HTML and Body Styles */
 
-/*page bg*/
+/*NEW: *{} selects all elements for easy property reset of stylesheet*/
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+/*same with less fluff (all experimentation is gone for now)*/
 html {
-    background-color: hsl(300, 73%, 90%);
     background-image: url("cloud_bg.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
+/*center page content in a container*/
+div#center {
+    margin: 0 auto;
+    max-width: 1400px;
+    min-width: 500px;
+    background-color: rgba(81, 75, 87, 0.158);
+}
+
+div#doggo {
+    align-content: center;
+}
+/*come back to this!!!!!!!!!!!!!!!!!!!!!!!!!*/
 body {
     margin-left: auto;
     margin-right: auto;
-    max-width: 960px;
+    max-width: 1200px;
     min-width: 640px;
-    color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0);
     font-family: Verdana, sans-serif;
 }
 
 h1 {
+    color: pink;
     text-align: center;
     font-family: Verdana, sans-serif;
+    font-stretch: ultra-expanded;
     letter-spacing: 0.1em;
-    background-color: rgba(0, 0, 0, 0.753);
+    background-color: rgba(0, 0, 0, 0.377);
     border: 2px solid rgb(255, 255, 255);
     border-radius: 8px;
     padding: 27px;
@@ -50,13 +68,25 @@ nav>ul>li {
     display: inline;
 }
 
-/*dreaded section css*/
+/*style-pos brings list back inside container*/
+nav>ul {
+    list-style-position: inside;
+    line-height: 1.5em;
+    padding: 0;
+}
 
+/*making nav an in-line list (horizontal nav)*/
+nav>ul>li {
+    display: inline;
+}
+
+div#column_container{
+    margin: 0 auto;
+}
 /*left right column set up???*/
 section#leftColumn {
     clear: left;
     float: left;
-    padding: 1.5em;
     width: 60%;
 }
 
@@ -64,8 +94,17 @@ section#rightColumn {
     float: left;
     width: 30%;
 }
+
 /*end l+r column set up*/
 
+/*resize logo*/
+aside {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+  }
+
+/*start regular section css*/
 section {
     border: 2px solid rgb(255, 255, 255);
     border-radius: 12px;
@@ -107,10 +146,8 @@ section>ol {
     padding: 27px;
 }
 
-/*end section css*/
-
+/*footer start*/
 footer {
-    /*fixed problem with footer not showing up on bottom using "clear: left;"*/
     clear: left;
     text-align: center;
     background-image: linear-gradient(to left, rgba(76, 0, 130, 0.733), rgba(238, 130, 238, 0.788), hsla(300, 73%, 90%, 0.767));
@@ -120,12 +157,14 @@ footer {
     padding: 5px;
 
 }
+/*links*/
+a:link { text-decoration: none; }
 
-a:link {
-    color: whitesmoke;
-    text-decoration: none;
-}
 
-a:hover {
-    text-decoration: underline dotted;
-}
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
